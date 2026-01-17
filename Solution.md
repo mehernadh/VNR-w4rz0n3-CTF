@@ -89,9 +89,14 @@ Not all secrets hide in ledgers. Some slip through the voices of diners. The Che
 ### Solution
 1. The challenge description hints that secrets are revealed through the voices of diners, implying user-generated input such as comments or feedback. The line about the review board echoing every word without thought suggests that the application reflects user input back to the page without proper validation or sanitization, which is a classic indicator of a Cross-Site Scripting vulnerability.
 2. Now let’s go back to the main dashboard and navigate to the Reviews / Feedback section.
+<img width="946" height="452" alt="image" src="https://github.com/user-attachments/assets/e8c83d54-73ea-4dc8-83c1-377a4ac11119" />
+
 3. Here, we will find an input field where user comments are displayed back to users.
 4. So, let’s try testing for Cross-Site Scripting (XSS) using: `<script>alert(1)</script>` in all the fields and click on submit.
+<img width="945" height="451" alt="image" src="https://github.com/user-attachments/assets/ca4bc065-8460-4e26-9c2a-94282f34d038" />
+
 5. We will see that the script executes successfully, confirming a reflected XSS vulnerability, and it retrieves the flag.
+<img width="658" height="340" alt="image" src="https://github.com/user-attachments/assets/c18b721c-e8df-478d-9589-d8b48e0847f2" />
 
 **Key Concept:** Reflected XSS due to lack of output encoding.
 
