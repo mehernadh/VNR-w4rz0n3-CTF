@@ -8,7 +8,6 @@ This document contains the official write-ups for all challenges hosted at:
 
 ## Chef's Secret Log
 **Difficulty:** Easy  
-**Points:** 20  
 **Flag Format:** `w4rz0n3{}`  
 **Flag:** `w4rz0n3{r3g1str4t10n_fl4g_f0und}`
 
@@ -37,7 +36,6 @@ The Chef once left a sticky note hidden within the kitchen’s first digital ord
 
 ## Secret Cellar
 **Difficulty:** Easy  
-**Points:** 20  
 **Flag Format:** `w4rz0n3{}`  
 **Flag:** `w4rz0n3{r0b0ts_t3ll_s3cr3ts}`
 
@@ -56,8 +54,7 @@ The night janitor once discovered the Chef’s private book hidden deep within t
 ---
 
 ## The Forgotten Ledger
-**Difficulty:** Easy  
-**Points:** 30  
+**Difficulty:** Easy   
 **Flag Format:** `w4rz0n3{}`  
 **Flag:** `w4rz0n3{sql_1nj3ct10n_m4st3r}`
 
@@ -82,7 +79,6 @@ Deep within the pantry lies the Archivist’s ledger, meant only for the Chef an
 
 ## Echoes of the Crowd
 **Difficulty:** Medium  
-**Points:** 20  
 **Flag Format:** `w4rz0n3{}`  
 **Flag:** `w4rz0n3{xss_c0mm3nt_h4ck}`
 
@@ -108,7 +104,6 @@ Not all secrets hide in ledgers. Some slip through the voices of diners. The Che
 
 ## The Secret Shelf
 **Difficulty:** Medium  
-**Points:** 50  
 **Flag Format:** `w4rz0n3{}`  
 **Flag:** `w4rz0n3{1d0r_4dm1n_4cc3ss}`
 
