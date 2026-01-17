@@ -36,4 +36,3 @@ Make sure you have these installed:
 
 4. The Web App will open on:
 - `http://localhost:5000`
-"# VNR-w4rz0n3-CTF" 
