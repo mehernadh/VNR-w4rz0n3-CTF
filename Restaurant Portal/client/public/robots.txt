@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /secret-search
+Disallow: /api/
+Allow: /
+
+# w4rz0n3{r0b0ts_t3ll_s3cr3ts}
