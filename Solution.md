@@ -30,6 +30,7 @@ The Chef once left a sticky note hidden within the kitchen’s first digital ord
 5. After logging in, open the browser Developer Tools (`F12`) and navigate to the Console tab. You will find the flag displayed there.
 <img width="721" height="346" alt="image" src="https://github.com/user-attachments/assets/301d6b79-e0f2-49c5-a9bd-edb1ba5b7ecd" />
 
+
 **Key Concept:** Sensitive Data Breache via client-side console logs.
 
 ---
@@ -48,6 +49,7 @@ The night janitor once discovered the Chef’s private book hidden deep within t
 2. So lets check the `/robots.txt` file, which is commonly used to list hidden or restricted paths.
 3. You will find the flag directly exposed in the `robots.txt` file.
 <img width="350" height="107" alt="image" src="https://github.com/user-attachments/assets/cf093751-b90b-420a-9144-22b6c2152f54" />
+
 
 **Key Concept:** Information disclosure via `robots.txt`.
 
@@ -72,6 +74,7 @@ Deep within the pantry lies the Archivist’s ledger, meant only for the Chef an
 3. Next, we test the input field for SQL Injection using a basic payload:
 `1 OR 1=1`. This payload works successfully, indicating that the backend query is vulnerable. As a result, the query returns unintended data, which reveals the flag.
 <img width="659" height="321" alt="image" src="https://github.com/user-attachments/assets/30ec9509-18f2-4711-9806-ed8970433a88" />
+
 
 **Key Concept:** SQL Injection due to improper input validation.
 
@@ -98,6 +101,7 @@ Not all secrets hide in ledgers. Some slip through the voices of diners. The Che
 5. We will see that the script executes successfully, confirming a reflected XSS vulnerability, and it retrieves the flag.
 <img width="658" height="340" alt="image" src="https://github.com/user-attachments/assets/c18b721c-e8df-478d-9589-d8b48e0847f2" />
 
+
 **Key Concept:** Reflected XSS due to lack of output encoding.
 
 ---
@@ -113,18 +117,28 @@ At the far end of the pantry rests the Chef’s private ledger, meant only for t
 
 ### Solution
 1. The challenge description hints at a restricted ledger accessible only to trusted staff, while also mentioning that the shelf labels can be altered. This suggests improper access controls or manipulatable identifiers that allow unauthorized users to view protected records. With this in mind, we revisit known restricted paths to look for administrative functionality.
-2. Let’s now go back to the /robots.txt directory, where we previously identified another path named /admin.
-3. Next, try accessing /admin, where we observe a user management panel.
-4. Monitor the network requests, and we will discover an API endpoint: `/api/users`.
-5. This API returns a JSON response containing user IDs and their admin status.
-6. While reviewing the JavaScript source, we find another endpoint: `/api/user/profile/{id}`.
-7. When we dive deeper, we observe that the {id} parameter must be Base64 encoded.
-8. Next, encode the user IDs obtained from `/api/users` and query the profile endpoint.
-9. One of the responses returns admin data along with the flag.
+2. Let’s now go back to the `/robots.txt` directory, where we previously identified another path named `/admin`.
+<img width="248" height="95" alt="image" src="https://github.com/user-attachments/assets/680a4ec5-4fe1-43ea-923d-cd287d7b8699" />
+
+3. Next, try accessing `/admin`, where we observe a user management panel.
+<img width="953" height="449" alt="image" src="https://github.com/user-attachments/assets/e8009a1d-108f-41f1-a040-84ca80881c60" />
+
+4. When we try exploring the `/admin`, we will encounter an error to fetch the details.
+5. Based on the error, now lets try out perform trial and error on API Endpoints if we could find something of our interest. Lets try the API endpoints `/api/users`. BOOM!! We get some data, that means it has some vulnerable api endpoints.
+<img width="284" height="266" alt="image" src="https://github.com/user-attachments/assets/140c8596-252b-4f0a-a2a3-64d741c1208e" />
+
+6. Futher reviewing we find another endpoint: `/api/user/profile/{id}`.
+7. When we dive deeper, we observe that the `{id}` parameter must be Base64 encoded. So, lets encode the user IDs obtained from `/api/users` and query the profile endpoint.
+<img width="497" height="393" alt="image" src="https://github.com/user-attachments/assets/0f4495ac-10ae-4742-a06f-73844261d523" />
+
+9. One of the responses returns admin (`/api/user/profile/YWRtaW5fdXNlcl8yMDI0`) data along with the flag.
+<img width="561" height="227" alt="image" src="https://github.com/user-attachments/assets/32dd63ce-8822-42d2-b7b3-c2d5080f1d32" />
+
 
 **Key Concept:** IDOR (Insecure Direct Object Reference) with weak access control.
 
 ---
 
-Happy Hacking!!
+
+## Happy Hacking!!
 
