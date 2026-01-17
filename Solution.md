@@ -64,9 +64,14 @@ Deep within the pantry lies the Archivist’s ledger, meant only for the Chef an
 
 ### Solution
 1. In the previous question, we reviewed the `/robots.txt` file. During that process, we noticed a hidden path named `/secret-search`, which appeared to be intentionally restricted and aligned with the challenge story hinting at a private ledger accessible only to trusted users.
+<img width="340" height="107" alt="image" src="https://github.com/user-attachments/assets/1360f923-1a13-4423-9403-e009303dd685" />
+
 2. So, let’s try navigating to `/secret-search` and see if we can find anything useful. Once we reach that page, we notice an input box, which suggests that the application is accepting user input and interacting with the backend.
+<img width="952" height="448" alt="image" src="https://github.com/user-attachments/assets/eb8d85aa-c191-442c-8b04-e36c7202933b" />
+
 3. Next, we test the input field for SQL Injection using a basic payload:
 `1 OR 1=1`. This payload works successfully, indicating that the backend query is vulnerable. As a result, the query returns unintended data, which reveals the flag.
+<img width="659" height="321" alt="image" src="https://github.com/user-attachments/assets/30ec9509-18f2-4711-9806-ed8970433a88" />
 
 **Key Concept:** SQL Injection due to improper input validation.
 
