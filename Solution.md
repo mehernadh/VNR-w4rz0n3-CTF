@@ -18,9 +18,12 @@ The Chef once left a sticky note hidden within the kitchen’s first digital ord
 ### Solution
 1. The description looks a bit fishy. It mentions the first digital order, which hints toward something related to the very first interaction or request. It also says no one ever read the kitchen logs, suggesting that secrets may be revealed by inspecting logs or hidden developer-side information. Based on this analysis of the story, let’s deep dive further.
 2. As the first step, open the target site. Once the site loads, you will be presented with a login page.
+<img width="956" height="452" alt="image" src="https://github.com/user-attachments/assets/0e5a4191-97d4-4ea9-9f6a-75348fa5d396" />
 3. Since we do not have any test account, create one by clicking on Sign Up.
+<img width="953" height="449" alt="image" src="https://github.com/user-attachments/assets/4fda543a-0f6b-4458-81a9-5b9fa02c6363" />
 4. Once the account is created, log in using the credentials you just registered with.
 5. After logging in, open the browser Developer Tools (`F12`) and navigate to the Console tab. You will find the flag displayed there.
+<img width="721" height="346" alt="image" src="https://github.com/user-attachments/assets/301d6b79-e0f2-49c5-a9bd-edb1ba5b7ecd" />
 
 **Key Concept:** Sensitive Data Breache via client-side console logs.
 
