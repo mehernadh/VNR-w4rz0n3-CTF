@@ -25,14 +25,10 @@ Make sure you have these installed:
 ## Project Setup (Steps to run the Web App Locally)
 1. Clone the Project Repository
 
-2. Install Dependencies
-- `npm install`
+2. Install Dependencies - `npm install`
 
-3. Build the Application 
-- `npm run build` 
+3. Build the Application - `npm run build` 
 
-3. Start the Application
-- `npm start`
+3. Start the Application - `npm start`
 
-4. The Web App will open on:
-- `http://localhost:5000`
+4. The Web App will open on - `http://localhost:5000`
