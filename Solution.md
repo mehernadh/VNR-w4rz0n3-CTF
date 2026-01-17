@@ -47,6 +47,7 @@ The night janitor once discovered the Chef’s private book hidden deep within t
 1. The description gives a strong hint toward a restricted or off-limits area. The janitor discovering the Chef’s private book and marking the place as off-limits suggests that something was intentionally hidden from regular access. The mention of a forgotten note lingering in old kitchen records implies that the restriction was documented somewhere publicly readable, guiding us to look for standard locations where such restrictions are recorded.
 2. So lets check the `/robots.txt` file, which is commonly used to list hidden or restricted paths.
 3. You will find the flag directly exposed in the `robots.txt` file.
+<img width="350" height="107" alt="image" src="https://github.com/user-attachments/assets/cf093751-b90b-420a-9144-22b6c2152f54" />
 
 **Key Concept:** Information disclosure via `robots.txt`.
 
