@@ -1,7 +1,7 @@
 # VNR Warzone — Web CTF Solutions
 
 This document contains the official write-ups for all challenges hosted at:
-**Target Application:** https://meher-ctf.onrender.com
+**Target Application:** [https://meher-ctf.onrender.com](https://vnr-w4rz0n3-ctf.onrender.com)
 
 ---
 
@@ -95,11 +95,11 @@ At the far end of the pantry rests the Chef’s private ledger, meant only for t
 1. The challenge description hints at a restricted ledger accessible only to trusted staff, while also mentioning that the shelf labels can be altered. This suggests improper access controls or manipulatable identifiers that allow unauthorized users to view protected records. With this in mind, we revisit known restricted paths to look for administrative functionality.
 2. Let’s now go back to the /robots.txt directory, where we previously identified another path named /admin.
 3. Next, try accessing /admin, where we observe a user management panel.
-4. Monitor the network requests, and we will discover an API endpoint: /api/users.
+4. Monitor the network requests, and we will discover an API endpoint: `/api/users`.
 5. This API returns a JSON response containing user IDs and their admin status.
-6. While reviewing the JavaScript source, we find another endpoint: /api/user/profile/{id}.
+6. While reviewing the JavaScript source, we find another endpoint: `/api/user/profile/{id}`.
 7. When we dive deeper, we observe that the {id} parameter must be Base64 encoded.
-8. Next, encode the user IDs obtained from /api/users and query the profile endpoint.
+8. Next, encode the user IDs obtained from `/api/users` and query the profile endpoint.
 9. One of the responses returns admin data along with the flag.
 
 **Key Concept:** IDOR (Insecure Direct Object Reference) with weak access control.
